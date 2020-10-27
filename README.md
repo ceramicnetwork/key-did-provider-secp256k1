@@ -10,6 +10,7 @@ import { DID } from 'dids'
 const secretKey = new Uint8Array(...) //  32 bytes with high entropy
 const provider = new Secp256k1Provider(secretKey)
 const did = new DID({ provider })
+await did.authenticate()
 
 const { jws, linkedBlock } = did.createDagJWS({ hello: 'world' })
 ```
