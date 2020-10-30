@@ -45,8 +45,7 @@ interface AuthParams {
 }
 
 const didMethods: HandlerMethods<Context> = {
-  // eslint-disable-next-line @typescript-eslint/require-await
-  did_authenticate: async ({ did }, params: AuthParams) => {
+  did_authenticate: ({ did }, params: AuthParams) => {
     return { did, paths: params.paths }
   },
   did_createJWS: async ({ did, secretKey }, params: CreateJWSParams) => {
@@ -59,8 +58,7 @@ const didMethods: HandlerMethods<Context> = {
     const jws = await createJWS(toStableObject(params.payload), signer, header)
     return { jws }
   },
-  // eslint-disable-next-line @typescript-eslint/require-await
-  did_decryptJWE: async () => {
+  did_decryptJWE: () => {
     throw new RPCError(4100, 'Decryption not supported')
   },
 }

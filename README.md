@@ -14,3 +14,7 @@ await did.authenticate()
 
 const { jws, linkedBlock } = did.createDagJWS({ hello: 'world' })
 ```
+
+## License
+
+Apache-2.0 OR MIT
