@@ -25,11 +25,11 @@
   "size-limit": [
     {
       "path": "dist/key-did-provider-secp256k1.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "170 KB"
     },
     {
       "path": "dist/key-did-provider-secp256k1.esm.js",
-      "limit": "10 KB"
+      "limit": "170 KB"
     }
   ],
   "devDependencies": {
